@@ -12,11 +12,11 @@ wget git.io/tracker.sh
 chmod 0777 /tracker.sh
 /bin/bash tracker.sh "/root/.aria2/aria2.conf"
 
-git clone https://github.com/666wcy/my_aria2_bot
+git clone https://github.com/wwpry/bot-h
 mkdir /bot/
-mv /my_aria2_bot/bot/* /bot/
+mv /bot-h/bot/* /bot/
 chmod 0777 /bot/ -R
-rm -rf /my_aria2_bot
+rm -rf /bot-h
 
 nohup aria2c --conf-path=/root/.aria2/aria2.conf --rpc-listen-port=8080 --rpc-secret=$Aria2_secret &
 python3 /bot/web.py
